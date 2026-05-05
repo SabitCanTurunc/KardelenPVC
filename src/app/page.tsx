@@ -86,8 +86,8 @@ export default function Home() {
   const brands = [
     { name: "Karpen", logo: "https://www.karpen.com.tr/view/default//images/logo.png", desc: "PVC Profil Sistemleri" },
     { name: "Egepen Deceuninck", logo: "https://www.egepen.com.tr/site/images/logo.svg", desc: "Dünya Standartlarında Yalıtım" },
-    { name: "Winsa", logo: "https://www.winsa.com.tr/sitefile/images/logo.svg", desc: "Konfor ve Estetik" },
-    { name: "Adopen", logo: "https://www.adopen.com.tr/wp-content/uploads/2022/09/adopen-logo-bg.svg", desc: "Teknolojik Çözümler" }
+    { name: "Kompen", logo: "https://www.kompen.com.tr/controls/tema/default/assets/img/logo.png", desc: "Komple Kalite" },
+    { name: "Flashpen", logo: "https://ui-avatars.com/api/?name=Flash+Pen&background=fff&color=004a99&font-size=0.25&size=400&bold=true", desc: "Fırat Kalitesiyle" }
   ];
 
   const stats = [

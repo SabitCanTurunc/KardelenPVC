@@ -6,8 +6,8 @@ const nextConfig: NextConfig = {
       { protocol: "https", hostname: "images.unsplash.com" },
       { protocol: "https", hostname: "www.karpen.com.tr" },
       { protocol: "https", hostname: "www.egepen.com.tr" },
-      { protocol: "https", hostname: "www.winsa.com.tr" },
-      { protocol: "https", hostname: "www.adopen.com.tr" }
+      { protocol: "https", hostname: "www.kompen.com.tr" },
+      { protocol: "https", hostname: "ui-avatars.com" }
     ],
     dangerouslyAllowSVG: true,
   },
