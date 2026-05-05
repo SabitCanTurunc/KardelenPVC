@@ -19,9 +19,27 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: `${product.title} Fiyatları Hatay | Kardelen Pen`,
     description: `Hatay ${product.category.toLowerCase()} modelleri. ${product.details} Antakya, İskenderun ve tüm ilçelere hizmet veriyoruz.`,
     keywords: `Hatay ${product.title}, Antakya ${product.category}, İskenderun demonte pencere, Hatay PVC, Turunçlar Plastik ${product.category}`,
+    alternates: {
+      canonical: `/urunler/${product.slug}`,
+    },
     openGraph: {
       title: `${product.title} - Hatay Kardelen PVC`,
       description: product.details,
+      url: `https://kardelenpvc.com/urunler/${product.slug}`,
+      images: [
+        {
+          url: product.image,
+          width: 800,
+          height: 600,
+          alt: `Hatay ${product.title} Sistemleri`,
+        }
+      ],
+      type: 'article',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: `${product.title} - Hatay PVC Sistemleri`,
+      description: `Hatay ${product.category} ve kapı sistemleri. ${product.details}`,
       images: [product.image],
     }
   };
@@ -65,11 +83,36 @@ export default async function ProductPage({ params }: Props) {
     }
   };
 
+  const breadcrumbLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Anasayfa",
+        "item": "https://kardelenpvc.com"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Ürünler",
+        "item": "https://kardelenpvc.com/#urunler"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": product.title,
+        "item": `https://kardelenpvc.com/urunler/${product.slug}`
+      }
+    ]
+  };
+
   return (
     <div className="min-h-screen bg-gray-50 pt-8 pb-20">
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify([jsonLd, breadcrumbLd]) }}
       />
       <div className="max-w-6xl mx-auto px-4">
         <Link href="/#urunler" className="inline-flex items-center text-[#004a99] font-bold mb-8 hover:underline">
@@ -80,7 +123,7 @@ export default async function ProductPage({ params }: Props) {
           <div className="md:w-1/2 relative h-[400px] md:h-auto">
             <Image 
               src={product.image} 
-              alt={`Hatay ${product.title}`} 
+              alt={`Hatay ${product.title} ${product.category} İmalatı ve Montajı`} 
               fill 
               className="object-cover"
               priority
