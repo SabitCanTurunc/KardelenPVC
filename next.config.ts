@@ -7,7 +7,7 @@ const nextConfig: NextConfig = {
       { protocol: "https", hostname: "www.karpen.com.tr" },
       { protocol: "https", hostname: "www.egepen.com.tr" },
       { protocol: "https", hostname: "www.kompen.com.tr" },
-      { protocol: "https", hostname: "ui-avatars.com" }
+      { protocol: "https", hostname: "flashpen.az" }
     ],
     dangerouslyAllowSVG: true,
   },

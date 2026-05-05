@@ -87,7 +87,7 @@ export default function Home() {
     { name: "Karpen", logo: "https://www.karpen.com.tr/view/default//images/logo.png", desc: "PVC Profil Sistemleri" },
     { name: "Egepen Deceuninck", logo: "https://www.egepen.com.tr/site/images/logo.svg", desc: "Dünya Standartlarında Yalıtım" },
     { name: "Kompen", logo: "https://www.kompen.com.tr/controls/tema/default/assets/img/logo.png", desc: "Komple Kalite" },
-    { name: "Flashpen", logo: "https://ui-avatars.com/api/?name=Flash+Pen&background=fff&color=004a99&font-size=0.25&size=400&bold=true", desc: "Fırat Kalitesiyle" }
+    { name: "Flashpen", logo: "https://flashpen.az/uploads/60a6cd884ef1e97652851a30abace29c.png", desc: "PVC Kapı ve Pencere Sistemleri" }
   ];
 
   const stats = [
